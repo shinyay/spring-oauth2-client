@@ -1,3 +1,6 @@
 package com.google.shinyay.client.model
 
-data class Employee()
+data class Employee(
+    val id: Long,
+    val name: String
+)
