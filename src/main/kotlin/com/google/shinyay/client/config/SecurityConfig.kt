@@ -14,10 +14,9 @@ import org.springframework.web.reactive.function.client.WebClient
 class SecurityConfig : WebSecurityConfigurerAdapter() {
     override fun configure(http: HttpSecurity?) {
         http?.authorizeRequests { authz ->
-            authz.antMatchers("/")
-                .permitAll()
-                .anyRequest()
-                .authenticated()
+            authz
+                .antMatchers("/").permitAll()
+                .anyRequest().authenticated()
         }
             ?.oauth2Login()
     }
