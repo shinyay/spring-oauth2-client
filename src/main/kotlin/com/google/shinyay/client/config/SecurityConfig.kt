@@ -21,3 +21,16 @@ class SecurityConfig : WebSecurityConfigurerAdapter() {
             ?.oauth2Login()
     }
 
+    @Bean
+    fun webClient(
+        clientRegistrationRepository: ClientRegistrationRepository?,
+        authorizedClientRepository: OAuth2AuthorizedClientRepository?
+    ): WebClient? {
+        val oauth2 = ServletOAuth2AuthorizedClientExchangeFilterFunction(
+            clientRegistrationRepository,
+            authorizedClientRepository
+        )
+        oauth2.setDefaultOAuth2AuthorizedClient(true)
+        return WebClient.builder().apply(oauth2.oauth2Configuration()).build()
+    }
+}
