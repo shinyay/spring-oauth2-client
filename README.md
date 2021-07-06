@@ -18,6 +18,7 @@ Overview
 ## Installation
 
 ## References
+- [Thymeleaf - Spring Security integration modules](https://github.com/thymeleaf/thymeleaf-extras-springsecurity)
 
 ## Licence
 
