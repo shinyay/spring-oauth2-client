@@ -1,1 +1,23 @@
-
+server:
+  port: 8080
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            client-id: shinyay-api
+            client-secret: 94db7bfc-9aa7-4fb3-8fe9-36fe65c33fb6
+            authorization-grant-type: authorization_code
+            redirect-uri: http://localhost:8080/login/oauth2/code/shinyay-api
+            scope: read,write
+        provider:
+          keycloak:
+            authorization-uri: http://localhost:8083/auth/realms/shinyay/protocol/openid-connect/auth
+            token-uri: http://localhost:8083/auth/realms/shinyay/protocol/openid-connect/token
+            jwk-set-uri: http://localhost:8888/auth/realms/shinyay/protocol/openid-connect/certs
+            user-info-uri: http://localhost:8083/auth/realms/shinyay/protocol/openid-connect/userinfo
+            user-name-attribute: preferred_username
+resourceserver:
+  api:
+    url: http://localhost:8081/resource-server/api/v1/employees
