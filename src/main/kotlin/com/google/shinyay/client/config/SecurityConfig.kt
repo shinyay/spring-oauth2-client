@@ -17,6 +17,7 @@ class SecurityConfig : WebSecurityConfigurerAdapter() {
             authz.antMatchers("/")
                 .permitAll()
                 .anyRequest()
+                .authenticated()
         }
             ?.oauth2Login()
     }
