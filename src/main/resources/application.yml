@@ -7,15 +7,18 @@ spring:
         registration:
           keycloak:
             client-id: shinyay-api
-            client-secret: 94db7bfc-9aa7-4fb3-8fe9-36fe65c33fb6
+            client-secret: 58e20d91-94c0-43a5-9463-0674ade2d691
             authorization-grant-type: authorization_code
-            redirect-uri: http://localhost:8080/login/oauth2/code/shinyay-api
-            scope: read,write
+            redirect-uri: '{baseUrl}/login/oauth2/code/{registrationId}'
+#            redirect-uri: http://localhost:8080/login/oauth2/code/keycloak
+            scope: openid
+#            scope: read,write
+            provider: keycloak
         provider:
           keycloak:
             authorization-uri: http://localhost:8083/auth/realms/shinyay/protocol/openid-connect/auth
             token-uri: http://localhost:8083/auth/realms/shinyay/protocol/openid-connect/token
-            jwk-set-uri: http://localhost:8888/auth/realms/shinyay/protocol/openid-connect/certs
+            jwk-set-uri: http://localhost:8083/auth/realms/shinyay/protocol/openid-connect/certs
             user-info-uri: http://localhost:8083/auth/realms/shinyay/protocol/openid-connect/userinfo
             user-name-attribute: preferred_username
 resourceserver:
