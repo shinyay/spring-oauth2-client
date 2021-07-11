@@ -7,6 +7,21 @@ Access to Resource Server with OAuth 2.0 with Keycloak Server
 - org.springframework.boot
   - `spring-boot-starter-oauth2-client`
 
+### Authorization Callback URL to redirect
+The following configuration means `http://localhost:8080/login/oauth2/code/keycloak`
+
+```yaml
+server:
+  port: 8080
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            redirect-uri: '{baseUrl}/login/oauth2/code/{registrationId}'
+```
+
 ## Demo
 
 ## Features
