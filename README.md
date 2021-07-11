@@ -3,6 +3,9 @@
 Access to Resource Server with OAuth 2.0 with Keycloak Server
 
 ## Description
+### Dependencies
+- org.springframework.boot
+  - `spring-boot-starter-oauth2-client`
 
 ## Demo
 
