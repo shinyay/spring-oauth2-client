@@ -7,7 +7,7 @@ spring:
         registration:
           keycloak:
             client-id: shinyay-api
-            client-secret: 58e20d91-94c0-43a5-9463-0674ade2d691
+            client-secret: 4941286c-757f-4a83-9d40-c77c07b81439
             authorization-grant-type: authorization_code
             redirect-uri: '{baseUrl}/login/oauth2/code/{registrationId}'
 #            redirect-uri: http://localhost:8080/login/oauth2/code/keycloak
