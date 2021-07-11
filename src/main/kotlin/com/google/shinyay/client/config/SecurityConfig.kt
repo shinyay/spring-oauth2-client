@@ -15,8 +15,8 @@ class SecurityConfig : WebSecurityConfigurerAdapter() {
     override fun configure(http: HttpSecurity?) {
         http?.authorizeRequests { authz ->
             authz
-                .antMatchers("/").permitAll()
-                .anyRequest().authenticated()
+                .antMatchers("/").authenticated()
+                .anyRequest().permitAll()
         }
             ?.oauth2Login()
     }
