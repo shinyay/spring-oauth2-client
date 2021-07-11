@@ -30,9 +30,9 @@
         <tr th:if="${employees.empty}">
             <td colspan="4">No Employees</td>
         </tr>
-        <tr th:each="foo : ${employees}">
-            <td><span th:text="${employees.id}"> ID </span></td>
-            <td><span th:text="${employees.name}"> Name </span></td>
+        <tr th:each="employee : ${employees}">
+            <td><span th:text="${employee.id}"> ID </span></td>
+            <td><span th:text="${employee.name}"> Name </span></td>
         </tr>
         </tbody>
     </table>
