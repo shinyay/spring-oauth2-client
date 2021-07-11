@@ -1,6 +1,6 @@
-# Name
+# OAuth 2.0 Client for Keycloak
 
-Overview
+Access to Resource Server with OAuth 2.0 with Keycloak Server
 
 ## Description
 
