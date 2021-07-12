@@ -123,6 +123,12 @@ $ curl -X GET -H "Content-Type: application/x-www-form-urlencoded" -H "Authoriza
 $ set -x TOKEN (curl -X POST "http://localhost:8083/auth/realms/shinyay/protocol/openid-connect/token" --data "grant_type=client_credentials&client_secret=0c5d257f-47bf-47e7-9400-08759fade9d9&client_id=shinyay-api"|jq -r .access_token)
 ```
 
+#### Verify JWT
+- https://jwt.io/
+
+![decode-jwt](https://user-images.githubusercontent.com/3072734/125258600-79bcf600-e339-11eb-8f70-438481dce103.png)
+
+
 ### Register data with POST Method
 ```shell
 $ curl -v -X POST -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" -d '{"name":"oauth2"}' localhost:8081/resource-server/api/v1/employees
