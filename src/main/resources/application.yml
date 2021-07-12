@@ -1,5 +1,9 @@
 server:
   port: 8080
+keycloak:
+  auth-server-url: http://localhost:8083/auth
+  realm: shinyay
+  base-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}/protocol/openid-connect
 spring:
   security:
     oauth2:
@@ -15,10 +19,10 @@ spring:
             provider: keycloak
         provider:
           keycloak:
-            authorization-uri: http://localhost:8083/auth/realms/shinyay/protocol/openid-connect/auth
-            token-uri: http://localhost:8083/auth/realms/shinyay/protocol/openid-connect/token
-            jwk-set-uri: http://localhost:8083/auth/realms/shinyay/protocol/openid-connect/certs
-            user-info-uri: http://localhost:8083/auth/realms/shinyay/protocol/openid-connect/userinfo
+            authorization-uri: ${keycloak.base-uri}/auth
+            token-uri: ${keycloak.base-uri}/token
+            jwk-set-uri: ${keycloak.base-uri}/certs
+            user-info-uri: ${keycloak.base-uri}/userinfo
             user-name-attribute: preferred_username
   jackson:
     serialization:
