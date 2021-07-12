@@ -22,7 +22,7 @@ spring:
             redirect-uri: '{baseUrl}/login/oauth2/code/{registrationId}'
 ```
 
-### Client ID and Secret
+### Registration for Client
 - `spring.security.oauth2.client.registration.keycloak.client-id`
   - Client ID from Keycloak
 
@@ -58,6 +58,44 @@ spring:
         registration:
           keycloak:
             scope: openid
+```
+
+### Provider for Client
+Keycloak endpoints:
+```shell
+$ curl -X GET http://localhost:8083/auth/realms/shinyay/.well-known/openid-configuration| jq .
+```
+```json
+{
+  "issuer": "http://localhost:8083/auth/realms/shinyay",
+  "authorization_endpoint": "http://localhost:8083/auth/realms/shinyay/protocol/openid-connect/auth",
+  "token_endpoint": "http://localhost:8083/auth/realms/shinyay/protocol/openid-connect/token",
+  "introspection_endpoint": "http://localhost:8083/auth/realms/shinyay/protocol/openid-connect/token/introspect",
+  "userinfo_endpoint": "http://localhost:8083/auth/realms/shinyay/protocol/openid-connect/userinfo",
+  "end_session_endpoint": "http://localhost:8083/auth/realms/shinyay/protocol/openid-connect/logout",
+  "jwks_uri": "http://localhost:8083/auth/realms/shinyay/protocol/openid-connect/certs",
+  "check_session_iframe": "http://localhost:8083/auth/realms/shinyay/protocol/openid-connect/login-status-iframe.html",
+  "grant_types_supported": [
+    "authorization_code",
+    "implicit",
+:
+:
+```
+```yaml
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            provider: keycloak
+        provider:
+          keycloak:
+            authorization-uri: http://localhost:8083/auth/realms/shinyay/protocol/openid-connect/auth
+            token-uri: http://localhost:8083/auth/realms/shinyay/protocol/openid-connect/token
+            jwk-set-uri: http://localhost:8083/auth/realms/shinyay/protocol/openid-connect/certs
+            user-info-uri: http://localhost:8083/auth/realms/shinyay/protocol/openid-connect/userinfo
+            user-name-attribute: preferred_username
 ```
 
 ## Demo
