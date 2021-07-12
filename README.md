@@ -35,6 +35,17 @@ spring:
 
 ![secret](https://user-images.githubusercontent.com/3072734/125216753-1bbcee00-e2fa-11eb-9373-381bf8787502.png)
 
+```yaml
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            client-id: shinyay-api
+            client-secret: 0c5d257f-47bf-47e7-9400-08759fade9d9
+```
+
 ## Demo
 
 ## Features
