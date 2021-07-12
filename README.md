@@ -28,6 +28,13 @@ spring:
 
 ![keycloak-client](https://user-images.githubusercontent.com/3072734/125216118-1c548500-e2f8-11eb-9000-f6340c07dcd6.png)
 
+- `spring.security.oauth2.client.registration.keycloak.client-secret`
+  - Credentials Secret from Keycloak
+
+![access-type-for-credential](https://user-images.githubusercontent.com/3072734/125216688-e87a5f00-e2f9-11eb-8626-d0f4ef6bf2c4.png)
+
+![secret](https://user-images.githubusercontent.com/3072734/125216753-1bbcee00-e2fa-11eb-9373-381bf8787502.png)
+
 ## Demo
 
 ## Features
