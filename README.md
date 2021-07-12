@@ -22,6 +22,12 @@ spring:
             redirect-uri: '{baseUrl}/login/oauth2/code/{registrationId}'
 ```
 
+### Client ID and Secret
+- `spring.security.oauth2.client.registration.keycloak.client-id`
+  - Client ID from Keycloak
+
+![keycloak-client](https://user-images.githubusercontent.com/3072734/125216118-1c548500-e2f8-11eb-9000-f6340c07dcd6.png)
+
 ## Demo
 
 ## Features
