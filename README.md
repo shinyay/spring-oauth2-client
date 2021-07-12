@@ -62,6 +62,8 @@ spring:
 
 ### Provider for Client
 Keycloak endpoints:
+![keycloak-endpoint](https://user-images.githubusercontent.com/3072734/125226297-c4277e00-e30b-11eb-871c-3637a531589c.png)
+
 ```shell
 $ curl -X GET http://localhost:8083/auth/realms/shinyay/.well-known/openid-configuration| jq .
 ```
@@ -97,6 +99,8 @@ spring:
             user-info-uri: http://localhost:8083/auth/realms/shinyay/protocol/openid-connect/userinfo
             user-name-attribute: preferred_username
 ```
+
+### Keycloak userinfo
 
 ## Demo
 
