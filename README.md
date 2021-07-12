@@ -2,6 +2,8 @@
 
 Access to Resource Server with OAuth 2.0 with Keycloak Server
 
+![keycloak-auth-flow](https://user-images.githubusercontent.com/3072734/125256072-09ad7080-e337-11eb-93d1-d192484b4120.png)
+
 ## Description
 ### Dependencies
 - org.springframework.boot
