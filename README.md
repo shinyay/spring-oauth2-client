@@ -46,6 +46,20 @@ spring:
             client-secret: 0c5d257f-47bf-47e7-9400-08759fade9d9
 ```
 
+
+- `spring.security.oauth2.client.registration.keycloak.scope`
+  - Client Access Scope with ID Token
+
+```yaml
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            scope: openid
+```
+
 ## Demo
 
 ## Features
