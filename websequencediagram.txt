@@ -1,0 +1,12 @@
+https://www.websequencediagrams.com/
+
+Browser->Client App: Connect
+Client App ->Auth Server: Get Token
+Auth Server ->Browser: Login Page
+Browser -> Auth Server: User Login  
+Auth Server --> Client App: Auth Code
+Client App -> Auth Server: Exchange Code for Token
+Auth Server -> Client App: Access Token
+Client App -> Resource Server: API Call with Access Token
+Resource Server --> Auth Server: Validate Token
+Resource Server -> Client App: API Response
