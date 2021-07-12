@@ -80,8 +80,9 @@ $ curl -X GET http://localhost:8083/auth/realms/shinyay/.well-known/openid-confi
   "grant_types_supported": [
     "authorization_code",
     "implicit",
-:
-:
+    :
+    :
+}
 ```
 ```yaml
 spring:
@@ -101,7 +102,19 @@ spring:
 ```
 
 ### Keycloak userinfo
-
+```shell
+$ set -x TOKEN (curl -X POST "http://localhost:8083/auth/realms/shinyay/protocol/openid-connect/token" --data "grant_type=client_credentials&client_secret=$CLIENT_SECRET&client_id=shinyay-api"|jq -r .access_token)
+```
+```shell
+$ curl -X GET -H "Content-Type: application/x-www-form-urlencoded" -H "Authorization: Bearer $TOKEN" http://localhost:8083/auth/realms/shinyay/protocol/openid-connect/userinfo|jq .
+```
+```json
+{
+  "sub": "fe20bbc1-f71e-4ee6-a620-5000ec28542d",
+  "email_verified": false,
+  "preferred_username": "service-account-shinyay-api"
+}
+```
 ## Demo
 
 ## Features
