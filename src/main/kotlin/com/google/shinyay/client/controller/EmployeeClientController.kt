@@ -14,7 +14,7 @@ class EmployeeClientController(val webClient: WebClient) {
     @Value("\${resourceserver.api.url}")
     lateinit var employeeApiUrl: String
 
-    @GetMapping("/")
+    @GetMapping("/employees")
     fun findAllEmployees(model: Model): String {
         val employees = webClient.get()
             .uri(employeeApiUrl)
