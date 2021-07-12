@@ -118,6 +118,10 @@ $ curl -X GET -H "Content-Type: application/x-www-form-urlencoded" -H "Authoriza
 }
 ```
 ## Demo
+### Access Token
+```shell
+$ set -x TOKEN (curl -X POST "http://localhost:8083/auth/realms/shinyay/protocol/openid-connect/token" --data "grant_type=client_credentials&client_secret=0c5d257f-47bf-47e7-9400-08759fade9d9&client_id=shinyay-api"|jq -r .access_token)
+```
 
 ## Features
 
