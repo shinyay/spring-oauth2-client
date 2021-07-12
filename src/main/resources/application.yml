@@ -20,6 +20,9 @@ spring:
             jwk-set-uri: http://localhost:8083/auth/realms/shinyay/protocol/openid-connect/certs
             user-info-uri: http://localhost:8083/auth/realms/shinyay/protocol/openid-connect/userinfo
             user-name-attribute: preferred_username
+  jackson:
+    serialization:
+      indent_output: true
 resourceserver:
   api:
     url: http://localhost:8081/resource-server/api/v1/employees
