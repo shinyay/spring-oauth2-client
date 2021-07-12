@@ -12,7 +12,6 @@ spring:
             redirect-uri: '{baseUrl}/login/oauth2/code/{registrationId}'
 #            redirect-uri: http://localhost:8080/login/oauth2/code/keycloak
             scope: openid
-#            scope: read,write
             provider: keycloak
         provider:
           keycloak:
