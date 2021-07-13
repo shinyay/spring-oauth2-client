@@ -118,6 +118,15 @@ $ curl -X GET -H "Content-Type: application/x-www-form-urlencoded" -H "Authoriza
 }
 ```
 ## Demo
+### Prepare Environment
+- Authorization Server
+  - [shinyay/spring-keycloak-authz-server](https://github.com/shinyay/spring-keycloak-authz-server)
+- Resource Server
+  - [shinyay/spring-security-oauth2-resource-server-gs](https://github.com/shinyay/spring-security-oauth2-resource-server-gs)
+- OAuth2.0 Client
+  - [shinyay/spring-security-oauth2-client-for-keycloak](https://github.com/shinyay/spring-security-oauth2-client-for-keycloak)
+
+
 ### Access Token
 ```shell
 $ set -x TOKEN (curl -X POST "http://localhost:8083/auth/realms/shinyay/protocol/openid-connect/token" --data "grant_type=client_credentials&client_secret=0c5d257f-47bf-47e7-9400-08759fade9d9&client_id=shinyay-api"|jq -r .access_token)
