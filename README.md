@@ -145,6 +145,19 @@ Endpoint JSON Samples
 }
 ```
 
+#### Application Configuration
+Spring Security configuration for Google OAuth 2.0
+```yaml
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 748706999601-gf59b6pdtn2tvfujli466vue8lddtudt.apps.googleusercontent.com
+            client-secret: ipHuyafsi4t3VVygH_NOldkN
+```
+
 ## Demo
 ### Prepare Environment
 - Authorization Server
