@@ -122,7 +122,11 @@ $ curl -X GET -H "Content-Type: application/x-www-form-urlencoded" -H "Authoriza
 - Setting up Google OAuth 2.0
   - [https://developers.google.com/identity/protocols/oauth2/openid-connect](https://developers.google.com/identity/protocols/oauth2/openid-connect)
   - [Google API Console](https://console.developers.google.com/)
-  - ![google-oauth2](https://user-images.githubusercontent.com/3072734/125743006-b2e10e8f-436e-4a97-b4b7-9d79a75b09e5.png)
+  
+![google-oauth2](https://user-images.githubusercontent.com/3072734/125743006-b2e10e8f-436e-4a97-b4b7-9d79a75b09e5.png)
+
+Client ID and Secret
+![client-id-secret](https://user-images.githubusercontent.com/3072734/125743481-09b5f7a4-4b3b-40b3-96db-6b77baed4724.png)
 
 
 ## Demo
