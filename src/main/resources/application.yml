@@ -17,6 +17,9 @@ spring:
 #            redirect-uri: http://localhost:8080/login/oauth2/code/keycloak
             scope: openid
             provider: keycloak
+          google:
+            client-id: 748706999601-gf59b6pdtn2tvfujli466vue8lddtudt.apps.googleusercontent.com
+            client-secret: ipHuyafsi4t3VVygH_NOldkN
         provider:
           keycloak:
             authorization-uri: ${keycloak.base-uri}/auth
