@@ -128,6 +128,22 @@ $ curl -X GET -H "Content-Type: application/x-www-form-urlencoded" -H "Authoriza
 Client ID and Secret
 ![client-id-secret](https://user-images.githubusercontent.com/3072734/125743481-09b5f7a4-4b3b-40b3-96db-6b77baed4724.png)
 
+Endpoint JSON Samples
+```json
+{
+  "web": {
+    "client_id": "748706999601-gf59b6pdtn2tvfujli466vue8lddtudt.apps.googleusercontent.com",
+    "project_id": "shinyay-works-210628",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_secret": "ipHuyafsi4t3VVygH_NOldkN",
+    "redirect_uris": [
+      "http://localhost:8080/login/oauth2/code/google"
+    ]
+  }
+}
+```
 
 ## Demo
 ### Prepare Environment
@@ -137,7 +153,6 @@ Client ID and Secret
   - [shinyay/spring-security-oauth2-resource-server-gs](https://github.com/shinyay/spring-security-oauth2-resource-server-gs)
 - OAuth2.0 Client
   - [shinyay/spring-security-oauth2-client-for-keycloak](https://github.com/shinyay/spring-security-oauth2-client-for-keycloak)
-
 
 ### Access Token
 ```shell
